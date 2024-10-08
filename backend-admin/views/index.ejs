@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Reset</title>
+  </head>
+
+  <body>
+    <h1 style="text-align: center"><%= email %></h1>
+    <form>
+      <input
+        type="password"
+        placeholder="New Password"
+        name="password"
+        id="password"
+        required
+        style="
+          margin-left: 500px;
+          margin-top: 150px;
+          width: 350px;
+          height: 50px;
+        "
+      /><br /><br />
+      <input
+        type="password"
+        placeholder="Confirm Password"
+        id="confirmPassword"
+        required
+        style="margin-left: 500px; margin-top: 10px; width: 350px; height: 50px"
+      /><br /><br />
+      <button
+        type="button"
+        onclick="validateForm()"
+        style="
+          background-color: rgb(62, 61, 82);
+          margin-left: 630px;
+          margin-top: 20px;
+          width: 100px;
+          height: 40px;
+          color: white;
+        "
+      >
+        Submit
+      </button>
+
+      <!-- <input type="password" placeholder="New Password" name="password" id="password" required><br><br>
+        <input type="password" placeholder="Confirm Password" id="confirmPassword" required><br><br>
+        <button type="submit">Submit</button> -->
+    </form>
+
+    <script>
+      function validateForm() {
+        const password = document.getElementById("password").value;
+        const confirmPassword =
+          document.getElementById("confirmPassword").value;
+
+        if (password !== confirmPassword) {
+          alert("Passwords do not match. Please re-enter your password.");
+          return false; // Prevent form submission
+        }
+
+        // Allow form submission
+        fetch("/api/reset-password/<%= user.id %>/<%= token %>", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ password: password }),
+        });
+        alert("Thank you , your password update successfully!");
+      }
+    </script>
+  </body>
+</html>

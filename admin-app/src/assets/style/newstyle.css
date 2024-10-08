@@ -1,0 +1,177 @@
+.Form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.Form h3 {
+    padding-top: 4rem;
+}
+
+.LoginForm form {
+    height: 520px;
+    width: 400px;
+    background-color: rgba(13, 12, 12, 0.6);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(218, 210, 210, 0.1);
+    box-shadow: 0 0 40px rgba(46, 46, 49, 0.6);
+    padding: 50px 35px;
+
+}
+
+form * {
+    font-family: 'Poppins', sans-serif;
+    color: #060505;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
+form h3 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.LoginForm form input {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(133, 132, 132, 0.6);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+::placeholder {
+    color: #e5e5e5;
+}
+
+/* button{
+    margin-top: 50px;
+    width: 100%;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+} */
+
+.Form form input {
+    padding: 10px 20px;
+   
+}
+
+
+.table-container {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    position: relative;
+}
+
+.table {
+    width: 40%;
+}
+
+.first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+.first-part {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-menu {
+    width: 100%;
+}
+
+form h2 {
+    font-size: 30px;
+    text-align: center;
+    color: black;
+    font-weight: 600;
+}
+
+form a {
+    color: rgb(48, 48, 224);
+    text-decoration: none;
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.category-container {
+    display: flex;
+    justify-content: center;
+    padding: 5rem;
+    align-items: center;
+    gap: 24px;
+}
+
+.Search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.Search-bar input,
+button {
+    outline: none;
+    height: 35px;
+    border: 1px solid black;
+}
+
+.Search-bar .btn {
+    display: flex;
+    align-items: center;
+}
+
+ td img{
+    height: 60px;
+    width: 60px;
+}
+
+.profile-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.profile-container .form{
+    margin-top: 3rem;
+}
